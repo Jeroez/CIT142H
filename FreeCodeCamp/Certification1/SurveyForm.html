@@ -1,0 +1,83 @@
+<head>
+    <meta charset="utf-8">-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+    <link href=styles.css rel="stylesheet">
+  </head>
+  
+  <body>
+    <section class="heads">
+      <h1 id="title">freeCodeCamp Survey Form</h1>
+      <p id="description">Thank you for taking the time to help us improve the platform</p>
+    </section>
+  
+    <form id="survey-form">
+  
+      <!--Input -->
+      <section class="input">
+        <label id ="name-label" for="name">Email<br><input id="name" type="text" placeholder="<Full Name>" required></input></label><br>
+        <label id ="email-label" for="email">Name<br><input id="email" type="email" placeholder="<Email address>" required minlength="10"></input></label><br>
+        <label id ="number-label" for="number">Age<br><input id="number" type="number" min="13" max="120"</input placeholder="Real Age" required></label><br><br><br>
+      </section>
+  
+      <!--dropdown Current Role -->
+      <section class="role">
+        <label<h5>Which option best describes your current role?</h5><br></label>
+        <select id="dropdown">
+          <option>Select current Role</option><br>
+          <option>Student</option><br>
+          <option>Full time Job</option><br>
+          <option>Full Time Learner</option><br>
+          <option>Perfer not to say</option><br>
+          <option>Other</option><br>
+        </select>
+      </section>
+      <!--Recommendation -->
+      <section class="rec">
+        <h5>Would you recommend freeCodeCamp to a friend?</h5>
+        <label><input type="radio" value="Button" name="radio" > Definitely</input></label><br>
+        <label><input type="radio" value="Button" name="radio" > Maybe</input></label><br>
+        <label><input type="radio" value="Button" name="radio" > Not Sure</input></label><br>
+      </section>
+  
+      <!--Dropdown Features-->
+      <section class="drop">
+        <label><h5>What is your favorite feature of freeCodeCamp?</h5></label>
+        <select id="dropdown">
+          <option>Select current Role</option><br>
+          <option>Challanges</option><br>
+          <option>Projects</option><br>
+          <option>Open Source</option><br>
+          <option>Community</option><br>
+          <option>Other</option><br>
+        </select>
+      </section>
+  
+  
+      <!--Checkbox -->
+      <section class="check">
+        <label><h5>What would you like to see improved? (Check all that apply)</h5></label>
+        <label><input type="CheckBox" value="CheckBox" name="Front" > Front-End Projects</input></label><br>
+        <label><input type="CheckBox" value="CheckBox" name="Back" > Back-End Projects</input></label><br>
+        <label><input type="CheckBox" value="CheckBox" name="Data" > Data Visualization</input></label><br>
+        <label><input type="CheckBox" value="CheckBox" name="Challanges" > Challanges</input></label><br>
+        <label><input type="CheckBox" value="CheckBox" name="Open Source" > Open Source Community</input></label><br>
+        <label><input type="CheckBox" value="CheckBox" name="Gitter" > Gitter Help Rooms</input></label><br>
+        <label><input type="CheckBox" value="CheckBox" name="Videos" > Videos</input></label><br>
+        <label><input type="CheckBox" value="CheckBox" name="Meetups" > City Meetups</input></label><br>
+        <label><input type="CheckBox" value="CheckBox" name="Wiki" > Wiki</input></label><br>
+        <label><input type="CheckBox" value="CheckBox" name="Forum" > Forum</input></label><br>
+        <label><input type="CheckBox" value="CheckBox" name="Courses" > Additional Courses</input></label><br>
+        <label><input type="CheckBox" value="CheckBox" name="Others" > Others</input></label><br>
+      </section>
+  
+  
+      <section class="end">
+      <label for="comments" class="com">Any comments or suggestions?<br><textarea rows="5" cols="50" id="comments" placeholder="Enter your comment here..."></textarea></label>
+  
+      <br><br>
+  
+      <input type="submit" id="submit"></input> 
+      </section>
+    </form>
+  </body>
