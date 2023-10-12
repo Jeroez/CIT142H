@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
+    <title>Accessibility Quiz</title>
     <link rel="stylesheet" href="styles.css" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="FreeCodeCamp Quiz">
-    <title>FreeCodeCamp Quiz</title>
   </head>
   <body>
     <header>
-      <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="logo" id="logo">
+      <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
       <h1>HTML/CSS Quiz</h1>
       <nav>
         <ul>
@@ -21,24 +21,100 @@
     </header>
     <main>
       <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
-        <section role="region" aria-labelledby="student-info"><h2 id="student-info">STUDENT INFO</h2>
-        <div class="info">
-          <label for="input1">Student Name: </label>
-          <input type="text" name="input" id="input1">
-        </div>
-        <div class="info">
-          <label for="input2">Email Address: </label>
-          <input type="email" name="input" id="input2">
-        </div>
-        <div class="info">
-          <label for="input3">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
-          <input type="date" name="input" id="input3">
-        </div>
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Student Info</h2>
+          <div class="info">
+            <label for="student-name">Name:</label>
+            <input type="text" name="student-name" id="student-name" />
+          </div>
+          <div class="info">
+            <label for="student-email">Email:</label>
+            <input type="email" name="student-email" id="student-email" />
+          </div>
+          <div class="info">
+            <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+            <input type="date" name="birth-date" id="birth-date" />
+          </div>
         </section>
-        <section role="region" aria-labelledby="html-questions"><h2 id="html-questions">HTML</h2></section>
-        <section role="region" aria-labelledby="css-questions"><h2 id="css-questions">CSS</h2></section>
-        <input type="submit">
+        <section role="region" aria-labelledby="html-questions">
+          <h2 id="html-questions">HTML</h2>
+          <div class="question-block">
+            <p>1</p>
+            <fieldset class="question" name="question">
+              <legend>You have learned all the lessons properly</legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q1-a1">
+                    <input type="radio" class="ans" id="q1-a1" value="True" name="a">
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label for="q1-a2">
+                    <input type="radio" class="ans" id="q1-a2" value="False" name="a">
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="question-block">
+            <p>2</p>
+            <fieldset class="question" name="question">
+              <legend>you love css</legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q2-a1">
+                    <input type="radio" class="ans" id="q2-a1" value="True" name="b">
+                    True 
+                  </label>
+                </li>
+                <li>
+                  <label for="q2-a2">
+                    <input type="radio" class="ans" id="q2-a2" value="False" name="b">
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+        <section role="region" aria-labelledby="css-questions">
+          <h2 id="css-questions">CSS</h2>
+          <div class="formrow">
+            <div class="question-block">
+              <label for="q1">Are you a frontend developer?
+              </label>
+            </div>
+            <div class="answer">
+              <select required id="q1" name="q1">
+                <option value="">Select an option</option>
+                <option value="yes">Yes</option>   
+                <option value="no">No</option>
+              </select>
+              
+            </div>
+            <div class="question-block">
+              <label for="q2">
+                did you understand everything?  
+              </label>
+            </div>
+            <div class="answer">
+              <textarea name="q2" id="q2" cols="30" rows="10" placeholder="Yes i understand everything"></textarea>
+            </div>
+          </div>
+        </section>
+          <input type="Submit" name="Submit" id="Submit" value="Send">
+        
       </form>
     </main>
+    <footer>
+      <address>
+        <a href="https://freecodecamp.org">freeCodeCamp</a> <br />
+        San Francisco<br />
+        California<br />
+        USA
+      </address>
+    </footer>
   </body>
 </html>
