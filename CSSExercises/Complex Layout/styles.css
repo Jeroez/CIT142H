@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1em;
+    padding: 1em;
+}
+
+aside {
+    background-color: #f4f4f4;
+    padding: 1em;
+}
+
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
